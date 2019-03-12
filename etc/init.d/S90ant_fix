@@ -1,0 +1,35 @@
+#!/bin/sh
+
+start() {
+
+   echo -n Fixing deployment GPIO names...
+   cat /etc/device_cfg/11-0054.cfg | sed -e 's/ANT_BURN/ANT_DEPLOY/g' > /etc/device_cfg/11-0054-upd.cfg
+   rm /etc/device_cfg/11-0054.cfg
+   echo OK
+}
+
+stop() {
+   echo
+}
+
+restart() {
+   echo
+}
+
+case "$1" in
+  start)
+    start
+	;;
+  stop)
+  	stop
+	;;
+  restart|reload)
+  	restart
+	;;
+  *)
+	echo $"Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?
+
