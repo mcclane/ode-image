@@ -1,2 +1,1 @@
 null::respawn:/usr/local/bin/ode-payload
-null::respawn:/bin/nice -n -1 /usr/local/bin/datalogger -p /usr/local/etc/dl_config
