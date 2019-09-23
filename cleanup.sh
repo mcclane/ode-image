@@ -4,6 +4,11 @@ mv etc/inittab etc/inittab.old
 cat etc/inittab.old | grep -v beacon > etc/inittab
 rm etc/inittab.old
 
+mv etc/inittab etc/inittab.old
+cat etc/inittab.old | grep -v sys_manager > etc/inittab
+rm etc/inittab.old
+
+
 if [ -e etc/inittab.append ] ; then
    cat etc/inittab.append >> etc/inittab
    rm -f etc/inittab.append
