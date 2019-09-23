@@ -1,1 +1,0 @@
-null::respawn:/bin/nice -n -6 /usr/sbin/satcomm
