@@ -1,1 +1,1 @@
-null::respawn:/root/ode-payload
+null::respawn:/usr/bin/ode-payload
